@@ -1,0 +1,438 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+button {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(../img/1718400182945.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.contenedor-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+header h1 {
+  color: white;
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: rgb(180, 180, 180);
+}
+
+header > .contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* BANNER */
+
+header h2,
+h4 {
+  color: white;
+  font-size: 40px;
+}
+
+header h3 {
+  color: rgb(72, 70, 221);
+  font-size: 60px;
+}
+
+/* SOBRE MÍ */
+
+#sobreMi {
+  padding: 60px 0;
+}
+
+#sobreMi > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sobreMi > div p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+#btnCV {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgb(43, 123, 243);
+  color: white;
+  width: 15%;
+  height: 35px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#btnCV:hover {
+  background-color: rgb(62, 105, 170);
+  cursor: pointer;
+}
+
+/* TECNOLOGÍAS */
+
+#tecnologias {
+  padding: 60px 0;
+  background-color: rgb(235, 235, 235);
+}
+
+#tecnologias > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.habilidades {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.habilidades > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.habilidades > article p {
+  margin: 0;
+}
+
+#tecnologias .habilidades article img {
+  width: 64px; /* ajustá según tu diseño */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#tecnologias .habilidades article:hover img {
+  transform: rotate(-5deg) translateY(-10px);
+}
+/* CONTACTO */
+
+footer {
+  padding: 60px 0;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 150px;
+}
+
+address a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-style: normal;
+  color: black;
+}
+
+/* MEDIA QUIERIS TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header,
+  .contenedor {
+    width: 100%;
+  }
+
+  #titulos {
+    display: flex;
+  }
+
+  header {
+    align-items: center;
+  }
+
+  .contenedor-nav {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* BANNER*/
+  header h4 {
+    text-align: center;
+  }
+
+  /* SOBRE MÍ*/
+
+  #btnCV {
+    width: 100%;
+    height: 50px;
+  }
+
+  /* TECNOLOGÍAS */
+
+  #tecnologias h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #tecnologias .contenedor {
+    gap: 70px;
+  }
+  .habilidades {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+    grid-row-gap: 30px;
+  }
+
+  footer h2,
+  h3 {
+    text-align: center;
+  }
+}
+
+/* MEDIA QUIERIS MOBILE */
+
+@media (max-width: 767px) {
+  header,
+  .contenedor {
+    width: 100%;
+  }
+
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    top: 2rem;
+    right: 2rem;
+
+    width: 35px;
+    height: 35px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .abrir-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
+    gap: 8px;
+    padding: 5px;
+  }
+
+  span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+
+  .cerrar-menu {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .cerrar-menu span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  .cerrar-menu span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .cerrar-menu span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  header {
+    background-position: 20% 20%;
+  }
+
+  .contenedor-nav {
+    padding: 2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    gap: 1rem;
+    padding: 2rem;
+    z-index: 1000;
+  }
+
+  nav.visible {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-top {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  header h4 {
+    text-align: center;
+  }
+
+  #btnCV {
+    width: 100%;
+    height: 50px;
+  }
+
+  #tecnologias h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #tecnologias .contenedor {
+    gap: 70px;
+  }
+
+  .habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+    grid-row-gap: 30px;
+  }
+
+  footer h2,
+  h3 {
+    text-align: center;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.2s ease-in-out;
+
+    z-index: 900; /* debajo del nav */
+  }
+
+  .overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
